@@ -1,3 +1,14 @@
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(0 48%, 20% 48%, 35% 55%, 59% 68%, 77% 70%, 93% 62%, 100% 55%, 100% 98%, 0 100%);
+    background: #4cbcf5;
+  }
+  50% {
+    clip-path: polygon(0 59%, 16% 68%, 47% 66%, 61% 57%, 73% 37%, 85% 25%, 100% 18%, 100% 98%, 0 100%);
+    background: #78beff;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -171,7 +182,30 @@ img {
 .nav-section {
   display: flex;
   justify-content: space-between;
-  margin-top: 3%;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .nav-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.nav-section .main-nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .nav-section .main-nav {
+    width: 100%;
+  }
+}
+.nav-section .main-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
 }
 .footer {
   width: 100%;
@@ -183,6 +217,35 @@ img {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+.home img {
+  animation: animate 4s ease-in-out;
+}
+@media (max-width: 500px) {
+  .home {
+    padding: 5%;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.home .dotted {
+  width: 237%;
+  margin-left: -69%;
+  border: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .dotted {
+    width: 150%;
+    margin-left: -46%;
+  }
+}
+.home header {
+  border-bottom: 2px dashed #C0C0C0;
 }
 .home .content-section {
   margin: 30px 0;
@@ -226,7 +289,36 @@ img {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 70%;
+  }
+}
+.home .content-pick .destination button {
+  border-radius: 1rem;
+  align-self: center;
+  width: 80%;
+  height: 50%;
+  padding: 5%;
+  text-align: center;
+  background-color: #17A2B8;
+  font-size: 1.8rem;
+  color: white;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination button {
+    padding: 3%;
+    width: 100%;
+  }
 }
