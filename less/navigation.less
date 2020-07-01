@@ -1,1 +1,28 @@
 // Navigation Styles here
+.nav-section{
+  
+  .displayRow(space-between,center);
+  @media @mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ .main-nav{
+    width: 50%;
+    .displayRow(space-between,center);
+    @media @mobile{
+      width: 100%;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
+      font-size: 2rem;
+      
+    }
+    
+
+}  
+}
+
+
